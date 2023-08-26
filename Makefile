@@ -10,6 +10,10 @@ build-%:
 test:
 	@ go test -coverpkg=./... ./...
 
+cover:
+	@ go test -coverpkg=./... -coverprofile=./coverage.out ./...
+	@ go tool cover -o coverage.html -html=./coverage.out
+
 run: run-helloworld
 
 run-%: build-%
