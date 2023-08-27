@@ -1,7 +1,3 @@
-# template-golang
-
-Template for golang project.
-
 ## Develop with containers
 
 - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
@@ -13,21 +9,3 @@ See also:
 
 - [Docker extension for Visual Studio Code](https://code.visualstudio.com/docs/containers/overview)
 - [Developing inside a Container using Visual Studio Code Remote Development](https://code.visualstudio.com/docs/remote/containers)
-
-## Build
-
-```
-make build
-```
-
-## Test
-
-```
-make test
-```
-
-## Run
-
-```
-make run
-```
