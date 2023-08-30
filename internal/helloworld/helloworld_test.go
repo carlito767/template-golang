@@ -5,10 +5,12 @@ import (
 )
 
 func TestHelloWorld(t *testing.T) {
-	want := "Hello, World!"
-	got := HelloWorld()
+	t.Run("hello world", func(t *testing.T) {
+		got := HelloWorld()
+		want := "Hello, World!"
 
-	if got != want {
-		t.Errorf("got: %v, want: %v", got, want)
-	}
+		if got != want {
+			t.Errorf("got: %v, want: %v", got, want)
+		}
+	})
 }
