@@ -3,9 +3,15 @@ package main
 import (
 	"fmt"
 
-	"github.com/carlito767/template-golang/internal/helloworld"
+	"github.com/carlito767/go-stack/clp"
 )
 
 func main() {
-	fmt.Println(helloworld.HelloWorld())
+	o := struct{ Name string }{"World"}
+	if err := clp.ParseOptions(&o); err != nil {
+		fmt.Printf("Error: %v\n", err)
+		return
+	}
+
+	fmt.Printf("Hello, %v!\n", o.Name)
 }
